@@ -12,10 +12,10 @@ SETUP INSTRUCTIONS:
   
 --> Backend  
 -> Create a new python environment and activte it  
--> cd into FlaskBackend folder and run - "pip install requirements.txt"  
+-> cd into FlaskBackend folder and run - "pip install -r requirements.txt"  
   
 --> Frontend   
--> Ensure you have node.js installed  
+-> Ensure you have node.js 16.15.0 installed  
 -> run the following command in your terminal to install angular cli - "npm install -g @angular/cli@10"  
 -> cd into AngularFrontend/greyscale and run the follwoing to install all dependencies - "npm install"  
   
@@ -25,7 +25,7 @@ INSTRUCTIONS TO RUN THE PROGRAM:
   
 --> Start backend flask server  
     -> Open a new terminal and cd into FlaskBackend  
-    -> First setup the required evn variable in the terminal by typing :   
+    -> First setup the required env variable in the terminal by typing (windows):   
         $env:FLASK_APP = "restservice.py"  
         $env:FLASK_ENV = "development"  
     -> Run the following in the same terminal to start the flask server:  
