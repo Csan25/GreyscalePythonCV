@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+ Convert your video to Greyscale!    
+</mat-toolbar>
+
+<mat-grid-list cols="7" rowHeight="300px">
+    <mat-grid-tile colspan="1" rowspan="1"></mat-grid-tile>
+    <mat-grid-tile colspan="5" rowspan="1">
+        <video [src]="url" *ngIf="format==='video' && url" height="300" controls>
+        </video> <br/>
+        <mat-spinner *ngIf="loading"></mat-spinner>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1"></mat-grid-tile>
+
+    <mat-grid-tile colspan="1" rowspan="1"></mat-grid-tile>
+    <mat-grid-tile colspan="5" rowspan="1">
+        <button color="primary" type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+        <input hidden (change)="onSelectFile($event)" #fileInput type="file">
+        <button color="primary" type="button" mat-raised-button (click)="onGetGreyscale($event)">Convert to Greyscale</button>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1"></mat-grid-tile>
+
+</mat-grid-list>
+
+
+
